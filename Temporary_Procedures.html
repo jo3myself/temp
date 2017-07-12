@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temporary Procedures</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <script
+	 src="https://code.jquery.com/jquery-3.2.1.min.js"
+	 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous"></script>
+
+	 <style type="text/css">
+		h1, h2 {
+      color: indigo;
+    }
+    .legacy {
+			width: 37%;
+		}
+    .badge {
+      background-color: red;
+    }
+    .margin01 {
+      margin-left: 104px;
+    }
+    .margin02 {
+      margin-left: 101px;
+    }
+	 	.margin03 {
+      margin-left: 144px;
+    }
+    input { 
+    text-align: center; 
+    }
+	 </style>
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+	
+	<div class="col-md-12">
+		
+
+		<div class="login">
+			<h2><span class="badge">+</span> Temporary Procedures <span class="badge">+</span></h2>
+			<p class="margin01">Please insert password</p>
+			<p><input type="password" placeholder="ask your lead" id="input" class="margin02"></p>
+			<p><button id="login" class="btn btn-primary margin03">Login</button></p>
+		</div>
+
+		<div class="listing">
+			<h1><span class="badge">+</span> Temporary Procedures <span class="badge">+</span></h1>
+			<table class="table-responsive table-bordered table">
+				<tr>
+					<th class="legacy"><center>LEGACY NUMBER</center></th>
+					<th><center>TITLE</center></th>
+				</tr>
+			</table>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+var password="red";		//Change Password HERE!!!
+var input="";
+var data=[
+	  a = {
+    number: "11.3.300",
+    href:"ARC-DOC-008653. Initiate a Suspect Product Case.pdf",
+    description: "Initiate a Suspect Product Case",
+  	},
+  	b = {
+    number: "11.4.frm300",
+    href:"ARC-DOC-008895. Component Investigation Form.docx",
+    description: "Component Investigation Form",
+  	},
+  	c = {
+    number: "11.4.ref305",
+    href:"ARC-DOC-009343.Lookback Management.pdf",
+    description: "Lookback Management",
+  	},
+  	d = {
+    number: "11.4.ref306",
+    href:"ARC-DOC-009345.Product Disposition Guidance.pdf",
+    description: "Product Disposition Guidance",
+  	},
+  	e = {
+    number: "14.4.frm307",
+    href:"ARC-DOC-018107.Donor Information Form.doc",
+    description: "Donor Information Form",
+    },
+    f = {
+    number: "14.4.ref144",
+    href:"ARC-DOC-019614. Providing Documents to the Donor and Client Support Center.pdf",
+    description: "Providing Documents to the Donor and Client Support Center",
+    },
+    g = {
+    number: "14.3.200",
+    href:"ARC-DOC-028836.14.3.200.pdf",
+    description: "Reviewing the BDR in ePROGESA",
+    },
+    h = {
+    number: "14.4.ref202",
+    href:"ARC-DOC-028837.14.4.ref202.pdf",
+    description: "Collections Document Review Criteria and Discrepancy Resolution",
+    },
+    i = {
+    number: "14.4.ref203",
+    href:"ARC-DOC-028838.14.4.ref203.pdf",
+    description: "APR Review Criteria and Discrepancy Resolution",
+    },
+    j = {
+    number: "15.4.ref402",
+    href:"ARC-DOC-011786.15.4.ref402.pdf",
+    description: "Donor Types, Product Types, and Completion Codes",
+    },
+    k = {
+    number: "15.4.ref405",
+    href:"ARC-DOC-011791.15.4.ref405.pdf",
+    description: "Allogeneic Eligibility Guidelines",
+    },
+    l = {
+    number: "15.4.ref406",
+    href:"ARC-DOC-011806.15.4.ref406.pdf",
+    description: "Countries with Malaria Risk",
+    },
+    m = {
+    number: "15.4.ref408",
+    href:"ARC-DOC-011821.15.4.ref408.pdf",
+    description: "Insulin Types",
+    },
+    n = {
+    number: "15.3.411",
+    href:"ARC-DOC-010710.15.3.411.pdf",
+    description: "Performing Physical Exams",
+  	},
+  	o = {
+    number: "15.3.416",
+    href:"ARC-DOC-010717.15.3.416.pdf",
+    description: "Performing Health History",
+  	},
+  	p = {
+    number: "15.4.ref500",
+    href:"ARC-DOC-011835.15.4.ref500.pdf",
+    description: "Autologous Eligibility Guidelines",
+  	},
+  	q = {
+    number: "15.4.ref614",
+    href:"ARC-DOC-011848.15.4.ref614.pdf",
+    description: "Hemoglobin to Hematocrit Conversion Chart",
+  	},
+  	r = {
+    number: "15.4.ref808",
+    href:"ARC-DOC-011872.15.4.ref808.pdf",
+    description: "Amicus Apheresis Procedure Record Review Tool",
+  	},
+  	s = {
+    number: "15.4.ref809",
+    href:"ARC-DOC-011875.15.4.ref809.pdf",
+    description: "ALYX Apheresis Procedure Record Review Tool",
+  	},
+  	t = {
+    number: "15.4.ref810",
+    href:"ARC-DOC-011878.15.4.ref810.pdf",
+    description: "MCS+ Apheresis Procedure Record Review Tool",
+  	},
+  	u = {
+    number: "15.4.ref811",
+    href:"ARC-DOC-011882.15.4.ref811.pdf",
+    description: "Spectra Apheresis Procedure Record Review Tool",
+  	},
+  	v = {
+    number: "15.4.ref812",
+    href:"ARC-DOC-011884.15.4.ref812.pdf",
+    description: "Trima Apheresis Procedure Record Review Tool",
+  	},
+  	w = {
+    number: "15.4.ref813",
+    href:"ARC-DOC-011885.15.4.ref813.pdf",
+    description: "ALYX Plasma Only Apheresis Procedure Record Review Tool",
+  	},
+  	x = {
+    number: "17.4.frm072",
+    href:"ARC-DOC-012667. Deletion Documentation Form.docx",
+    description: "Deletion Documentation Form",
+  	}
+    
+];
+
+$(document).ready(function() {
+	$(".login").show();
+	$(".listing").hide();
+	for (var i = 0; i < data.length; i++) {
+		$(".table").append("<tr><td>"+data[i].number+'</td><td><a href="'+data[i].href+ '" target="_blank">'+data[i].description+"</a></td></tr>");
+	}
+
+
+});
+
+$("#login").on("click", function() {
+	input = $("#input").val();
+	if (input !== password) {
+		alert("Incorrect Password!");
+		$("#input").val("");
+	}
+	else {
+		$(".login").hide();
+		$(".listing").show();
+	}
+});
+
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+        input = $("#input").val();
+		if (input !== password) {
+			alert("Incorrect Password!");
+			$("#input").val("");
+		}
+		else {
+			$(".login").hide();
+			$(".listing").show();
+		}
+	}
+});
+
+</script>
+</body>
+</html>
